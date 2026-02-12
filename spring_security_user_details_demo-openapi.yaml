@@ -1,0 +1,30 @@
+openapi: "3.1.0"
+info:
+  title: "spring_security_user_details_demo API"
+  description: "使用 user details 的 spring security demo"
+  version: "1.0.0"
+servers:
+  - url: "http://localhost:8080"
+paths:
+  /api/admin:
+    get:
+      summary: "取得 admin 資源(帳密:admin / admin)"
+      operationId: "admin"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            'text/html':
+              schema:
+                type: "string"
+  /api/user:
+    get:
+      summary: "取得 user 資源(帳密:user / user)"
+      operationId: "user"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            'text/htm':
+              schema:
+                type: "string"
